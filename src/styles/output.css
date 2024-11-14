@@ -597,11 +597,6 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -623,6 +618,10 @@ video {
   display: flex;
 }
 
+.h-\[2px\] {
+  height: 2px;
+}
+
 .h-\[34px\] {
   height: 34px;
 }
@@ -631,40 +630,24 @@ video {
   height: 36px;
 }
 
-.h-\[80px\] {
-  height: 80px;
-}
-
-.h-\[\] {
-  height: ;
-}
-
 .h-\[62px\] {
   height: 62px;
 }
 
-.w-\[268px\] {
-  width: 268px;
-}
-
-.w-\[90\%\] {
-  width: 90%;
-}
-
-.w-full {
-  width: 100%;
+.h-\[80px\] {
+  height: 80px;
 }
 
 .w-\[118px\] {
   width: 118px;
 }
 
-.w-\[100\%\] {
-  width: 100%;
+.w-\[268px\] {
+  width: 268px;
 }
 
-.w-\[\] {
-  width: ;
+.w-full {
+  width: 100%;
 }
 
 .flex-row {
@@ -736,9 +719,23 @@ video {
   background-color: rgb(34 137 31 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#22891f\]\/20 {
+  background-color: rgb(34 137 31 / 0.2);
+}
+
 .bg-\[\#e3f2fd\] {
   --tw-bg-opacity: 1;
   background-color: rgb(227 242 253 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#2c742f\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(44 116 47 / var(--tw-bg-opacity));
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-\[12px\] {
@@ -749,26 +746,6 @@ video {
 .px-\[15px\] {
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.py-\[\] {
-  padding-top: ;
-  padding-bottom: ;
 }
 
 .px-\[2rem\] {
@@ -797,6 +774,10 @@ video {
   font-size: 12px;
 }
 
+.text-\[13px\] {
+  font-size: 13px;
+}
+
 .text-\[14px\] {
   font-size: 14px;
 }
@@ -807,10 +788,6 @@ video {
 
 .text-\[30px\] {
   font-size: 30px;
-}
-
-.text-\[13px\] {
-  font-size: 13px;
 }
 
 .font-normal {
@@ -844,4 +821,30 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.after\:contents::after {
+  content: var(--tw-content);
+  display: contents;
+}
+
+.after\:bg-\[\]::after {
+  content: var(--tw-content);
+  background-color: ;
+}
+
+.after\:bg-\[\#2c742f\]::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(44 116 47 / var(--tw-bg-opacity));
+}
+
+.after\:opacity-\[\.8\]::after {
+  content: var(--tw-content);
+  opacity: .8;
+}
+
+.after\:content-\[\]::after {
+  --tw-content: ;
+  content: var(--tw-content);
 }

